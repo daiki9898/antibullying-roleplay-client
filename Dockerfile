@@ -1,5 +1,5 @@
 ## ビルドステージ
-FROM node:18 AS build
+FROM node:20.16.0 AS build
 
 # 作業ディレクトリ
 WORKDIR /app
