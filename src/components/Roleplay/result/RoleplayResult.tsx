@@ -82,7 +82,7 @@ const RoleplayResult: React.FC = () => {
       console.error("ローカルストレージへの保存に失敗しました:", storageError);
     }
     try {
-      window.open("http://localhost:8080/auth-url", "_blank");
+      window.open(import.meta.env.VITE_DOCUMENT_AUTH_URL, "_blank");
     } catch (error) {
       console.error("認証ページが開けませんでした", error);
     }
