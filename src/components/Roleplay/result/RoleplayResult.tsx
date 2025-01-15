@@ -23,6 +23,7 @@ import jsPDF from "jspdf";
 import { generateRoleplay } from "../../../api/roleplay";
 import LoadingBackdrop from "../../common/LoadingBackdrop";
 import axios, { CancelTokenSource } from "axios";
+import RoleplayConditions from "./RoleplayConditions";
 
 const RoleplayResult: React.FC = () => {
   const navigate = useNavigate();
@@ -215,6 +216,7 @@ const RoleplayResult: React.FC = () => {
         {/* メインコンテンツ */}
         <Box sx={{ display: "flex", gap: "2rem" }}>
           <Box sx={{ flex: 1 }}>
+            <RoleplayConditions formData={formData!} />
             <RoleplayDocument
               data={roleplayData!}
               refs={{ scenarioRef, worksheetRef }}
